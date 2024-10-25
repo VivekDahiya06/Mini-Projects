@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-image: image-set(url("images/background.webp") 2.1x);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    height: 60%;
+    background: linear-gradient(45deg, rgba(1, 114, 213, 0.871),rgba(198, 3, 198, 0.627),rgba(255, 0, 68, 0.74));
+    border-radius: 20px;
+    opacity: 1;
+    font-family: Ubuntu, sans-serif;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 18px;
+    background: white;
+    margin-top: 80px;
+    transition: all 1s linear;
+}
+.input img{
+    width: 25px;
+    height: 25px;
+}
+.input input{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+}
+#btn{
+    border: 1px solid greenyellow;
+    outline: 0;
+    font-size: 20px;
+    margin-top: 55px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.2s linear;
+}
+#btn:hover{
+    transform: scale(1.03);
+    box-shadow: 4px 2px 8px rgb(55, 54, 54);
+}
+.response{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 350px;
+    background: white;
+    border-radius: 10px;
+    position: absolute;
+    transform: scale(0);
+    font-family: Ubuntu, sans-serif;
+}
+.response img{
+    transform: scale(0.3);
+    position: absolute;
+    top: -205px;
+}
+.response h1{
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 45px;
+}
+.response p{
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 55px;
+}
+.response button{
+    margin-bottom: -50px;
+    width: 90%;
+    height: 12%;
+    color: white;
+    border: 0;
+    outline: 0;
+    background: rgba(3, 164, 3, 0.946);
+}
+.response button:hover{
+    transition: all 300ms linear;
+    box-shadow: 2px 3px 5px 0px  #393737;
+}
+@keyframes animate {
+    0%{top: 0px; left:550px; transform: scale(0.1);opacity: 0;}
+    25%{top: 20px; left:550px; transform: scale(0.3);opacity: 0;}
+    50%{top: 40px; left:550px; transform: scale(0.5);opacity: 0;}
+    75%{top: 60px; left:550px; transform: scale(0.7);opacity: 0;}
+    100%{top: 80px; left:550px; transform: scale(1);opacity: 1.2;}
+}
+.props{
+    animation-name: animate;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
